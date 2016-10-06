@@ -31,8 +31,8 @@ public class QA {
 		return score;
 	}
 	
-	public Answer getAnswer(){
-		return answer;
+	public String getAnswer(){
+		return answer.toString();
 	}
 	
 	

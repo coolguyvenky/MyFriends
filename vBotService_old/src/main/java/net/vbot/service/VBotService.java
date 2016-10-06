@@ -3,7 +3,6 @@ package net.vbot.service;
 import java.util.HashMap;
 import java.util.Map;
 
-import net.vbot.domain.Answer;
 import net.vbot.domain.AnswerUtil;
 import net.vbot.domain.ImageDTO;
 import net.vbot.domain.VBotDTO;
@@ -19,10 +18,10 @@ public class VBotService {
 	
 	public VBotDTO search(VBotDTO dto){
 		//dto.setResponse(mockGetAnswer(dto.getRequest()));
-		Answer ans = AnswerUtil.getAnswers(dto.getRequest());
-		dto.setRespText(ans.getAnswerText());
-		dto.setLink(ans.getUrl());
-		dto.setImage(new ImageDTO(ans.getImageDescription(), ans.getImageURL()));
+		dto.setRespText(AnswerUtil.getAnswers(dto.getRequest()));
+		
+		dto.setLink("www.chase.com");
+		dto.setImage(new ImageDTO("smile", "/smile"));
 		
 		
 		return dto;

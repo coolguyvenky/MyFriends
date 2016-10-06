@@ -1,4 +1,4 @@
-package net.vbot.domain;
+package com.virtusa.chatbot.ai.nlp;
 
 public class Answer {
 	

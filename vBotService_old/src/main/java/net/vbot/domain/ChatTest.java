@@ -1,5 +1,4 @@
-package net.vbot.domain;
-
+package com.virtusa.chatbot.ai.nlp;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -76,7 +75,7 @@ public class ChatTest {
 		rejectList = new ArrayList<>(Arrays.asList(rejectArray));
 	}
 
-	public static void main1(String[] args) {
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		boolean end = false;
 		Scanner scanner = new Scanner(System.in);
@@ -93,9 +92,8 @@ public class ChatTest {
 		}
 	}
 
-	public static Answer getAnswers(String question) {
-		String defaultAns = "Sorry, I did not get that";
-		Answer answer = new Answer(defaultAns);
+	public static String getAnswers(String question) {
+		String answer = "Sorry, I did not get that";
 		List<String> filteredQuestion = getFilteredQuestion(question);
 		int maxScore = 0;
 		QA maxQA = null;
